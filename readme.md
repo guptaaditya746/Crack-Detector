@@ -44,10 +44,7 @@ In our project, we need to annotate cracks in wall images. Each annotation will 
 - **Get a Second Opinion:** Have someone else review the annotations to spot any errors.
 - **Test Early:** Use a portion of your annotated data to test initial models and identify any issues with the annotations.
 
-## Documentation
 
-- **Keep a Record:** Document each annotated image with details about the crack’s location, size, and any specific features.
-- **Regular Checks:** Periodically review the annotated images to maintain high standards.
 
 
 
