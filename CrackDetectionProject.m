@@ -2,16 +2,16 @@
 function CrackDetectionProject
 
 %Define Folder containing input images
-inputImageFolder = 'C:\Users\pc\Documents\DIGITAL ENGINEERING\Summer 2024\Image Analysis and Object Recognition\Exercise\Final Project\Bunmi\raw_input'; %Modify as suitable
+inputImageFolder = 'C:\Users\pc\Documents\DIGITAL ENGINEERING\Summer 2024\Image Analysis and Object Recognition\Exercise\Final Project\Bunmi\Crack-Detector\data\Original Image'; %Modify as suitable
 
 %Define folder cointaining annotated images done with GIMP software
-annotatedImageFolder = 'C:\Users\pc\Documents\DIGITAL ENGINEERING\Summer 2024\Image Analysis and Object Recognition\Exercise\Final Project\Bunmi\annotated_group'; %Modify as suitable
+annotedImageFolder = 'C:\Users\pc\Documents\DIGITAL ENGINEERING\Summer 2024\Image Analysis and Object Recognition\Exercise\Final Project\Bunmi\Crack-Detector\data\Image Annotation'; %Modify as suitable
 
 %Listing alll image files in the raw input folder
 inputImageFiles = dir(fullfile(inputImageFolder, '*.jpg'));
 
 %Defining the result image folder parts
-resultImageFolder = 'C:\Users\pc\Documents\DIGITAL ENGINEERING\Summer 2024\Image Analysis and Object Recognition\Exercise\Final Project\Bunmi\results'; %Modify as suitable
+resultImageFolder = 'C:\Users\pc\Documents\DIGITAL ENGINEERING\Summer 2024\Image Analysis and Object Recognition\Exercise\Final Project\Bunmi\Crack-Detector\data\Results'; %Modify as suitable
 
 
 %Proceeding to Process all Images
@@ -23,8 +23,8 @@ for imgIdx = 1:length(inputImageFiles)
 
     %Defining the annotated image file name based on the input image
     [~, baseFilename, ext] = fileparts(inputImageFiles(imgIdx).name);
-    annotedImageName = fullfile(annotatedImageFolder, [baseFilename, '_annotated', ext]);
-    annotatedImage = imread(annotedImageName);
+    annotatedImageName = fullfile(annotedImageFolder, [baseFilename, '_annotated', ext]);
+    annotatedImage = imread(annotatedImageName);
 
     %Performing Adaptive Thresholding to binarize Images
     [greyImage, binaryImage] = AdaptiveThresholding(inputImage);
